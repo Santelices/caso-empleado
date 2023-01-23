@@ -9,87 +9,132 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Formulario-empleado</title>
 </head>
 
 <body>
+    <div class = "container">
+        <!-- IMAGEN -->
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <img src="./img/user.JPG" class="img-fluid shadow mx-4 ">
+                
+            </div>
+            <!-- FORMULARIO -->
+            <div class="col-sm-10 col-md-6 col-lg-6 col-xl-6 mt-4">
+                <form class="row g-2">
+                    <!-- NOMBRE Y APELLIDO -->
+                    <div class="col-sm-10 m-2">
+                        <label class="form-label">Nombres</label>
+                        <input class="form-control" aria-label="First name" >
+                    </div>
+                    <div class="col-sm-10 m-2">
+                        <label class="form-label">Apellidos</label>
+                        <input class="form-control"  aria-label="Last name">
+                    </div>
 
-    <div class="container-fluid">
+                    <!-- GENERO -->
+                    <div class="col-sm-6 m-2">
+                        <label for="inputAddress" class="form-label">Genero</label>
+                        <select class="form-select">
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                        </select>
+                    </div>
 
-        <form class="row g-1">
-            <div class="col-md-6 ">
-                <label for="inputEmail4" class="form-label">Nombres</label>
-                <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Apellidos</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-md-6">
-                <label for="inputAddress" class="form-label">Genero</label>
-                <select class="form-select">
-                    <option>Masculino</option>
-                    <option>Femenino</option>
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label for="inputAddress2" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">Fecha de Ingreso</label>
-                <input type="date" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-3">
-                <label for="inputZip" class="form-label">Salario</label>
-                <input type="number" class="form-control" id="inputZip">
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-warning mt-4">Modificar Salario</button>
-            </div>
-            <hr>
-            <div class="col-12">
-                <button type="button" class="btn btn-success" id="id-add-empleado">Agregar Empleado</button>
-                <button type="button" class="btn btn-primary" id="id-calcular-edad">Calcular Edad</button>
-                <button type="button" class="btn btn-primary">Calcular Antiguedad</button>
-                <button type="button" class="btn btn-primary">Calcular Prestaciones</button>
-            </div>
-        </form>
+                    <!-- FECHAS -->
+                    <div class="col-sm-6 m-2">
+                        <label for="inputAddress2" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-sm-6 m-2">
+                        <label for="inputCity" class="form-label">Fecha de Ingreso</label>
+                        <input type="date" class="form-control" id="inputCity">
+                    </div>
 
-        <div class="row g-5">
-            <div class="card">
-                <div class="card-header">
-                    Detalles de Empleado
+                    <!-- SALARIO y AGREGAR EMPLEADO -->
+                    <div class="input-group mt-4 m-2">
+                        <div class="col-md-4">
+                            <input type="number" class="form-control" placeholder="Salario" aria-describedby="button-addon2">
+                        </div>
+                        <div class="col-md-6 " >
+                            <button type="button" class="btn btn-secondary btn" id="button-addon2">Modificar Salario</button>
+                            <button type="button" class="btn btn-success " id="id-add-empleado">Agregar Empleado</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> 
+
+        <!-- BOTONES -->
+        <div class="col-12 text-center m-3">
+            <button type="button" class="btn btn-primary" id="id-calcular-edad">Calcular Edad</button>
+            <button type="button" class="btn btn-primary">Calcular Antiguedad</button>
+            <button type="button" class="btn btn-primary">Calcular Prestaciones</button>
+        </div>  
+
+        <!-- TABLA -->
+            <div class="row g-4 mb-3">
+                <div class="card col-md-12">
+                    <div class="card-header">
+                        Detalles del Empleado
+                    </div>
+                    <div class="card-body p-80">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Nombres</th>
+                                    <th>Genero</th>
+                                    <th>F.Nacimiento</th>
+                                    <th>F.Ingreso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Francisco Javier Toledo Cabezas</td>
+                                    <td>M</td>
+                                    <td>01-31-1998</td>
+                                    <td>22-01-2023</td>
+                                </tr>
+                                <tr>
+                                    <td>0002</td>
+                                    <td>Omar Alejandro Amador Alava</td>
+                                    <td>M</td>
+                                    <td>20-06-2000</td>
+                                    <td>22-01-2023</td>
+                                </tr>
+                                <tr>
+                                    <td>0003</td>
+                                    <td>Kleinny Melanny Duran Torres</td>
+                                    <td>F</td>
+                                    <td>26-01-2001</td>
+                                    <td>22-01-2023</td>
+                                </tr>
+                                <tr>
+                                    <td>0004</td>
+                                    <td>Isaac Antonio Villarreal Cabrera</td>
+                                    <td>M</td>
+                                    <td>06-11-2000</td>
+                                    <td>22-01-2023</td>
+                                </tr>
+                                <tr>
+                                    <td>0005</td>
+                                    <td>Cristian Noe Santelices Farez</td>
+                                    <td>M</td>
+                                    <td>25-11-2000</td>
+                                    <td>22-01-2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div class="card-body p-0">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>Codigo</th>
-                                <th>Nombres</th>
-                                <th>Genero</th>
-                                <th>F.Nacimiento</th>
-                                <th>F.Ingreso</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>0001</td>
-                                <td>Ernesto Guaman</td>
-                                <td>M</td>
-                                <td>02-03-1986</td>
-                                <td>02-15-2023</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
             </div>
-        </div>
-
     </div>
-
+</div>
     <script src="./app.js" type="module"></script>
 </body>
 
